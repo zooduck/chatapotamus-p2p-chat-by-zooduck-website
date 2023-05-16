@@ -1,0 +1,83 @@
+export default `
+/*
+|==================================================|
+| PUBLIC VARIABLES                                 |
+|==================================================|
+| --command-line-prompt-color                      |
+| --command-line-prompt-background-color           |
+|--------------------------------------------------|
+*/
+
+:host {
+  /* ------------------------- */
+  /* !!! PRIVATE VARIABLES !!! */
+  /* ------------------------- */
+  --_background-color: var(--command-line-prompt-background-color, transparent);
+  --_color: var(--command-line-prompt-color, var(--color-white));
+  --_initial-delay: 2000ms;
+
+  display: block;
+}
+
+#root {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+slot {
+  display: none;
+}
+
+.character {
+  display: inline-block;
+  animation: character var(--_initial-delay) linear both;
+  overflow: hidden;
+}
+
+.word {
+  background-color: var(--_background-color);
+  color: var(--_color);
+  display: flex;
+}
+
+.cursor {
+  width: 1ch;
+  background-color: var(--_color);
+  color: var(--_color);
+  animation: blink 1s infinite;
+}
+
+.cursor:before {
+  content: 'X';
+}
+
+@keyframes blink {
+  0% {
+    visibility: hidden;
+  }
+  49% {
+    visibility: hidden;
+  }
+  50% {
+    visibility: visible;
+  }
+  99% {
+    visibility: visible;
+  }
+  100% {
+    visibility: hidden;
+  }
+}
+
+@keyframes character {
+  0% {
+    width: 0;
+  }
+  99% {
+    width: 0;
+  }
+  100% {
+    width: auto;
+  }
+}
+`;

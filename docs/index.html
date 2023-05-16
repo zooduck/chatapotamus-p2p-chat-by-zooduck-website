@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Chatapotamus P2P Chat by ZOODUCK</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="index.css">
+    <!-- fonts onload listener -->
+    <script>
+      function onFontsLoad() {
+        setTimeout(() => {
+          window.scrollTo(0, 0);
+          document.getElementById('header').classList.add('header--fonts-loaded');
+        }, 1000);
+      }
+    </script>
+    <!-- fonts -->
+    <link
+      rel="preconnect"
+      href="https://fonts.gstatic.com">
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Roboto+Flex:wdth,wght@25..151,100..1000&display=swap"
+      onload="onFontsLoad()">
+    <!-- scripts -->
+    <script src="index.js" type="module"></script>
+  </head>
+  <body>
+    <section class="header-intro-container" id="header-intro-container">
+      <header class="header" id="header">
+        <h1 class="header__title">
+          <span>Chatapotamus</span>
+          <span class="header__subtitle">P2P Chat by ZOODUCK</span>
+        </h1>
+        <section class="header__description">
+          <p>
+            <command-line-prompt initial-delay="1000" no-cursor typing-speed="50">No Frameworks.</command-line-prompt>
+            <command-line-prompt initial-delay="1700" no-cursor typing-speed="50">No Libraries.</command-line-prompt>
+            <command-line-prompt initial-delay="2350" no-cursor typing-speed="50">No Bundlers.</command-line-prompt>
+            <command-line-prompt initial-delay="2950" no-cursor typing-speed="50" id="no-npm-packages">No NPM Packages.</command-line-prompt>
+          </p>
+        </section>
+        <command-line-prompt class="header__slogan" initial-delay="4750" typing-speed="50" retain-cursor>
+          Building faster and better without dependency hell since 1985.<sup>&copy;</sup>
+        </command-line-prompt>
+      </header>
+    </section>
+
+    <main class="main" id="main">
+      <chatapotamus-p2p-chat-by-zooduck api-docs force-dark-mode log-connection-info></chatapotamus-p2p-chat-by-zooduck>
+
+      <section class="chatapotamus-p2p-chat-by-zooduck-placeholder"></section>
+
+      <outline-box class="disclaimer" outline-style="dashed">
+        <h2 class="disclaimer__heading">Disclaimer</h2>
+        <p>
+          By default, the &lt;chatapotamus-p2p-chat-by-zooduck&gt; element can be hosted on any secure website.
+        </p>
+        <p>
+          Once a connection is established by the element, all communications are made directly between
+          two peer devices, without any middleware, and messages are stored on your local machine only
+          (using window.localStorage).
+        </p>
+        <p>
+          However, you should be wary of using this element on just any site, because it is
+          impossible to know whether or not your message and/or video data will be captured by that site.
+        </p>
+        <p>
+          It is therefore recommended that you host the element on your own site if you want to guarantee your privacy.
+        </p>
+      </outline-box>
+
+      <outline-box class="how-to-guide" outline-width="2px">
+        <h2 class="how-to-guide__heading how-to-guide__heading--h2">Getting started</h2>
+
+        <p>
+          Download the <a href="https://github.com/zooduck/chatapotamus-p2p-chat-by-zooduck/archive/refs/heads/master.zip" download="chatapotamus-p2p-chat-by-zooduck.zip">chatapotamus-p2p-chat-by-zooduck.zip</a> to your machine.
+          (This is a .zip archive of the <a href="https://github.com/zooduck/chatapotamus-p2p-chat-by-zooduck" target="_blank">zooduck/chatapotamus-p2p-chat-by-zooduck</a> repository).
+        </p>
+
+        <p>
+          Next, unzip the archive (we suggest using <a href="https://www.7-zip.org/" target="_blank">7Zip</a> to avoid
+          "path too long" errors on Windows) and copy the <code>modules</code> folder to your project, making sure to
+          place it in the root directory where files are served.
+        </p>
+
+        <p>
+          For example, if your project's <code>index.html</code> is located at <code>my-project/public/index.html</code> the <code>modules</code>
+          path should be <code>my-project/public/modules</code>.
+        </p>
+
+        <p class="how-to-guide__warning">
+          If you cannot place the <code>modules</code> folder at the root, please consult the "Fixing assets path issues" section
+          in the <code>README.md</code> file.
+        </p>
+
+        <p>
+          Add the following script tag to the document head:
+        </p>
+
+        <pre class="how-to-guide__code-snippet">
+&lt;script src="path/to/chatapotamus-p2p-chat-by-zooduck.distributable/index.module.js" type="module"&gt;&lt;/script&gt;</pre>
+
+        <p>
+          Then, add the element to your page:
+        </p>
+
+        <pre class="how-to-guide__code-snippet">
+&lt;chatapotamus-p2p-chat-by-zooduck api-docs&gt;&lt;/chatapotamus-p2p-chat-by-zooduck&gt;</pre>
+
+        <p>
+          Note: The <code>api-docs</code> attribute is optional.
+        </p>
+
+        <h2 class="how-to-guide__heading how-to-guide__heading--h2">Using the &lt;chatapotamus-p2p-chat-by-zooduck&gt; element</h2>
+
+        <section>
+          <h3 class="how-to-guide__heading how-to-guide__heading--h3">
+            Standalone Mode
+          </h3>
+
+          <section>
+            <p>
+              This is the default.
+            </p>
+
+            <p>
+              In this mode the component provides a user interface for creating unique handles
+              and generating session description offers and answers to be shared between two peers.
+            </p>
+
+            <p>
+              How that information is shared between the two peers is entirely up to them (email, messenger, etc).
+            </p>
+
+            <p>
+              This makes the connection incredibly secure, since the unique session description offers and answers
+              required to establish the connection are known only to the two peers.
+            </p>
+          </section>
+        </section>
+
+        <section>
+          <h3 class="how-to-guide__heading how-to-guide__heading--h3">
+            Production Mode
+          </h3>
+
+          <section>
+            <p>
+              To enable production mode, set the <code>production-mode</code> attribute:
+            </p>
+
+<pre class="how-to-guide__code-snippet">&lt;chatapotamus-p2p-chat-by-zooduck production-mode&gt;&lt;/chatapotamus-p2p-chat-by-zooduck&gt;</pre>
+
+            <p>
+              In this mode the user interface is limited to post-connection actions only (such as
+              messaging, VoIP, file sending and screen sharing).
+            </p>
+
+            <p>
+              All connection related logic must be handled using the methods and events provided by the component.
+            </p>
+
+            <p>
+              This mode is therefore intended for developers wishing to incorporate the component
+              into their application and handle the exchange of session description offers and answers
+              between component pairs using a central server.
+            </p>
+
+            <p>
+              More details can be found by clicking the Docs CTA<sup>1</sup> in the component header.
+            </p>
+
+            <p class="how-to-guide__footnote">
+              <sup>1</sup>To enable the Docs CTA, set the <code>api-docs</code> attribute on the component. Setting
+              the <code>production-mode</code> attribute permanently disables this feature.
+            </p>
+          </section>
+        </section>
+      </outline-box>
+
+      <outline-box class="dependencies" outline-width="2px">
+        <h2 class="dependencies__heading">
+          <span>SVG Icons</span>
+          <br>
+          <span class="dependencies__heading-subtext">Included in this project</span>
+        </h2>
+        <section class="svg-icons" id="svg-icons"></section>
+      </outline-box>
+
+      <outline-box class="dependencies dependencies--component-library" id="component-library" outline-width="2px">
+        <h2 class="dependencies__heading">
+          <span>Web Components</span>
+          <br>
+          <span class="dependencies__heading-subtext">Included in this project</span>
+        </h2>
+      </outline-box>
+
+      <outline-box class="dependencies" id="mixins" outline-width="2px">
+        <h2 class="dependencies__heading">
+          <span>Mixins</span>
+          <br>
+          <span class="dependencies__heading-subtext">Included in this project</span>
+        </h2>
+      </outline-box>
+
+      <outline-box class="dependencies" id="utils" outline-width="2px">
+          <h2 class="dependencies__heading">
+            <span>Utilities</span>
+            <br>
+            <span class="dependencies__heading-subtext">Included in this project</span>
+          </h2>
+      </outline-box>
+    </main>
+
+    <footer class="footer"><span>BE NICE OR EAT SOME RICE</span><span>2023</span></footer>
+
+    <script>
+      document.getElementById('no-npm-packages').oncommandlineprompttypingcomplete = () => {
+        window.scrollTo(0, 0);
+        const headerIntroContainerElement = document.getElementById('header-intro-container');
+        const mainElement = document.getElementById('main');
+        headerIntroContainerElement.classList.add('header-intro-container--intro-complete');
+        mainElement.classList.add('main--intro-complete');
+      };
+    </script>
+  </body>
+</html>

@@ -1,0 +1,31 @@
+{
+  "name": "@zooduck/chatapotamus-p2p-chat-by-zooduck-website",
+  "version": "0.0.1",
+  "description": "Website for the chatapotamus-p2p-chat-by-zooduck WebRTC project",
+  "main": "docs/index.html",
+  "repository": {
+    "url": "git+https://github.com/zooduck/chatapotamus-p2p-chat-by-zooduck-website.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "node build.mjs",
+    "start": "node build.mjs && node server.mjs"
+  },
+  "author": "zooduck",
+  "license": "ISC",
+  "devDependencies": {
+    "@zooduck/build-tools": "^0.0.1",
+    "@zooduck/simple-server": "^0.0.1"
+  },
+  "dependencies": {
+    "@zooduck/chatapotamus-p2p-chat-by-zooduck": "^0.0.1",
+    "@zooduck/safe-dom-parser": "^0.0.1"
+  },
+  "bugs": {
+    "url": "https://github.com/zooduck/chatapotamus-p2p-chat-by-zooduck-website/issues"
+  },
+  "homepage": "https://github.com/zooduck/chatapotamus-p2p-chat-by-zooduck-website#readme",
+  "directories": {
+    "doc": "docs"
+  }
+}
