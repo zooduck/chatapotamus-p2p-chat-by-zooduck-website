@@ -44,15 +44,21 @@ for (const { elementName, localName, instances, path, componentLibraryElementsCo
         ],
         cssVariables: [],
         script: (element) => {
+          let parentNode;
           const intersectionObserver = new IntersectionObserver((entries) => {
             entries.forEach((entry) => {
               if (entry.isIntersecting) {
                 element.style.visibility = 'visible';
-                intersectionObserver.unobserve(element);
+                parentNode.append(element);
+                intersectionObserver.unobserve(parentNode);
               }
             });
           }, { threshold: 0 });
-          intersectionObserver.observe(element);
+          element.ready().then(() => {
+            ({ parentNode } = element);
+            element.remove();
+            intersectionObserver.observe(parentNode);
+          });
         }
       }
     ]
@@ -71,15 +77,21 @@ for (const { elementName, localName, instances, path, componentLibraryElementsCo
         ],
         cssVariables: [],
         script: (element) => {
+          let parentNode;
           const intersectionObserver = new IntersectionObserver((entries) => {
             entries.forEach((entry) => {
               if (entry.isIntersecting) {
                 element.style.visibility = 'visible';
-                intersectionObserver.unobserve(element);
+                parentNode.append(element);
+                intersectionObserver.unobserve(parentNode);
               }
             });
           }, { threshold: 0 });
-          intersectionObserver.observe(element);
+          element.ready().then(() => {
+            ({ parentNode } = element);
+            element.remove();
+            intersectionObserver.observe(parentNode);
+          });
         }
       }
     ]
