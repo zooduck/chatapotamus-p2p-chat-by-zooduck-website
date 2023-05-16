@@ -47,7 +47,7 @@
       </header>
     </section>
 
-    <a class="github-repo-link" href="https://github.com/zooduck/chatapotamus-p2p-chat-by-zooduck" target="_blank">Github Repository</a>
+    <a class="github-repo-link" href="https://github.com/zooduck/chatapotamus-p2p-chat-by-zooduck" id="github-repo-link" target="_blank">Github Repository</a>
 
     <main class="main" id="main">
       <chatapotamus-p2p-chat-by-zooduck api-docs force-dark-mode log-connection-info></chatapotamus-p2p-chat-by-zooduck>
@@ -221,10 +221,9 @@
     <script>
       document.getElementById('no-npm-packages').oncommandlineprompttypingcomplete = () => {
         window.scrollTo(0, 0);
-        const headerIntroContainerElement = document.getElementById('header-intro-container');
-        const mainElement = document.getElementById('main');
-        headerIntroContainerElement.classList.add('header-intro-container--intro-complete');
-        mainElement.classList.add('main--intro-complete');
+        document.getElementById('header-intro-container').classList.add('header-intro-container--intro-complete');
+        document.getElementById('main').classList.add('main--intro-complete');
+        document.getElementById('github-repo-link').classList.add('github-repo-link--intro-complete');
       };
     </script>
   </body>

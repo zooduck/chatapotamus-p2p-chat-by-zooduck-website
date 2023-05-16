@@ -97,12 +97,20 @@ body {
   position: absolute;
   right: 0;
   top: 0;
+  transform: translateY(-100%);
+  transition: transform var(--animation-speed-normal);
+  visibility: hidden;
   z-index: var(--z-index-normal);
 }
 
 .github-repo-link:is(:active, :focus) {
   outline: dotted 2px var(--color-white);
   outline-offset: -2px;
+}
+
+.github-repo-link--intro-complete {
+  transform: translateY(0);
+  visibility: visible;
 }
 
 .main {
@@ -120,8 +128,8 @@ body {
 }
 
 .main--intro-complete {
-  visibility: visible;
   transform: translateY(0);
+  visibility: visible;
 }
 
 .chatapotamus-p2p-chat-by-zooduck-placeholder {
