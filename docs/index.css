@@ -19,6 +19,7 @@ body {
   display: grid;
   grid-template-rows: auto 1fr auto;
   margin: 0 auto;
+  position: relative;
 }
 
 .header-intro-container {
@@ -87,6 +88,16 @@ body {
 
 .header--fonts-loaded .header__slogan {
   transform: translateX(0);
+}
+
+.github-repo-link {
+  background-color: var(--color-hookers-green);
+  color: white;
+  padding: var(--padding-size-medium);
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: var(--z-index-normal);
 }
 
 .main {
@@ -266,5 +277,17 @@ footer:empty {
 @media screen and (max-width: 1047.9px) {
   .main {
     min-width: 100%;
+  }
+}
+
+@media screen and (max-width: 580px) {
+  .github-repo-link {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 440px) {
+  .header__description {
+    display: none;
   }
 }
