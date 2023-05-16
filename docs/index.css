@@ -100,6 +100,11 @@ body {
   z-index: var(--z-index-normal);
 }
 
+.github-repo-link:is(:active, :focus) {
+  outline: dotted 2px var(--color-white);
+  outline-offset: -2px;
+}
+
 .main {
   align-items: center;
   display: grid;
