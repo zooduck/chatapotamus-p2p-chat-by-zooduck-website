@@ -222,8 +222,10 @@
       document.getElementById('no-npm-packages').oncommandlineprompttypingcomplete = () => {
         window.scrollTo(0, 0);
         document.getElementById('header-intro-container').classList.add('header-intro-container--intro-complete');
+        document.getElementById('main').ontransitionend = () => {
+          document.getElementById('github-repo-link').classList.add('github-repo-link--intro-complete');
+        }
         document.getElementById('main').classList.add('main--intro-complete');
-        document.getElementById('github-repo-link').classList.add('github-repo-link--intro-complete');
       };
     </script>
   </body>
