@@ -50,7 +50,6 @@ for (const { elementName, localName, instances, path, componentLibraryElementsCo
               if (entry.isIntersecting) {
                 element.style.visibility = 'visible';
                 parentNode.append(element);
-                intersectionObserver.unobserve(parentNode);
               }
             });
           }, { threshold: 0 });
@@ -83,7 +82,6 @@ for (const { elementName, localName, instances, path, componentLibraryElementsCo
               if (entry.isIntersecting) {
                 element.style.visibility = 'visible';
                 parentNode.append(element);
-                intersectionObserver.unobserve(parentNode);
               }
             });
           }, { threshold: 0 });

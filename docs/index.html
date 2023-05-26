@@ -227,6 +227,25 @@
         }
         document.getElementById('main').classList.add('main--intro-complete');
       };
+      const chatapotamusP2PChatByZooduckElementIntersectionObserver = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            // ---------------------------------------------------------------------------
+            // Remove alert service elements when the chatapotamus-p2p-chat-by-zooduck
+            // element is visible since they capture focus and prevent Tab functionality.
+            // ---------------------------------------------------------------------------
+            const alertServiceAlertElement = document.querySelector('alert-service-alert');
+            const alertServiceConfirmElement = document.querySelector('alert-service-confirm');
+            if (alertServiceAlertElement) {
+              alertServiceAlertElement.remove();
+            }
+            if (alertServiceConfirmElement) {
+              alertServiceConfirmElement.remove();
+            }
+          }
+        });
+      }, { threshold: 0 });
+      chatapotamusP2PChatByZooduckElementIntersectionObserver.observe(document.querySelector('chatapotamus-p2p-chat-by-zooduck'));
     </script>
   </body>
 </html>
