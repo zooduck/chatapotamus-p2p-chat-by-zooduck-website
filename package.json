@@ -18,7 +18,7 @@
     "@zooduck/simple-server": "^0.0.2"
   },
   "dependencies": {
-    "@zooduck/chatapotamus-p2p-chat-by-zooduck": "^0.0.3",
+    "@zooduck/chatapotamus-p2p-chat-by-zooduck": "^0.0.4",
     "@zooduck/safe-dom-parser": "^0.0.1"
   },
   "bugs": {
