@@ -38,16 +38,19 @@
             <command-line-prompt initial-delay="1000" no-cursor typing-speed="50">No Frameworks.</command-line-prompt>
             <command-line-prompt initial-delay="1700" no-cursor typing-speed="50">No Libraries.</command-line-prompt>
             <command-line-prompt initial-delay="2350" no-cursor typing-speed="50">No Bundlers.</command-line-prompt>
-            <command-line-prompt initial-delay="2950" no-cursor typing-speed="50" id="no-npm-packages">No NPM Packages.</command-line-prompt>
+            <command-line-prompt initial-delay="2950" no-cursor typing-speed="50" id="no-npm-packages-prompt">No NPM Packages.</command-line-prompt>
           </p>
         </section>
-        <command-line-prompt class="header__slogan" initial-delay="4750" typing-speed="50" retain-cursor>
+        <command-line-prompt class="header__slogan" id="dependency-hell-prompt" initial-delay="4750" typing-speed="50" retain-cursor>
           Building faster and better without dependency hell since 1985.<sup>&copy;</sup>
         </command-line-prompt>
       </header>
     </section>
 
-    <a class="github-repo-link" href="https://github.com/zooduck/chatapotamus-p2p-chat-by-zooduck" id="github-repo-link" target="_blank">Github Repository</a>
+    <a class="github-repo-link" href="https://github.com/zooduck/chatapotamus-p2p-chat-by-zooduck" id="github-repo-link" target="_blank">
+      <img src="GitHub_Logo_White.png" alt="Github logo" />
+      <img src="github-mark-white.svg" alt="Invertocat logo" />
+    </a>
 
     <main class="main" id="main">
       <chatapotamus-p2p-chat-by-zooduck api-docs force-dark-mode log-connection-info></chatapotamus-p2p-chat-by-zooduck>
@@ -219,13 +222,14 @@
     <footer class="footer"><span>BE NICE OR EAT SOME RICE</span><span>2023</span></footer>
 
     <script>
-      document.getElementById('no-npm-packages').oncommandlineprompttypingcomplete = () => {
+      document.getElementById('no-npm-packages-prompt').oncommandlineprompttypingcomplete = () => {
         window.scrollTo(0, 0);
         document.getElementById('header-intro-container').classList.add('header-intro-container--intro-complete');
-        document.getElementById('main').ontransitionend = () => {
-          document.getElementById('github-repo-link').classList.add('github-repo-link--intro-complete');
-        }
         document.getElementById('main').classList.add('main--intro-complete');
+      };
+
+      document.getElementById('dependency-hell-prompt').oncommandlineprompttypingcomplete = () => {
+        document.getElementById('github-repo-link').classList.add('github-repo-link--intro-complete');
       };
       const chatapotamusP2PChatByZooduckElementIntersectionObserver = new IntersectionObserver((entries) => {
         entries.forEach((entry) => {

@@ -93,12 +93,16 @@ body {
 .github-repo-link {
   background-color: var(--color-hookers-green);
   color: white;
+  display: flex;
+  gap: 0.5em;
+  height: 50px;
+  justify-content: center;
   padding: var(--padding-size-medium);
   position: absolute;
   right: 0;
   top: 0;
   transform: translateY(-100%);
-  transition: transform var(--animation-speed-normal);
+  transition: transform var(--animation-speed-fast);
   visibility: hidden;
   z-index: var(--z-index-normal);
 }
