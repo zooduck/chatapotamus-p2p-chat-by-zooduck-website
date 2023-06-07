@@ -461,7 +461,7 @@ for (const { name, path } of [
   },
   {
     name: 'networkUtils',
-    path: 'src-files/dependencies/utils/networkUtils.util.js'
+    path: 'src-files/dependencies/utils/NetworkUtils.util.js'
   },
   {
     name: 'SafeDOMParser (class)',
