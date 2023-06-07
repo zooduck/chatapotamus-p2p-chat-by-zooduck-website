@@ -1,1 +1,0 @@
-import './emojiTray.component.js';

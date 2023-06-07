@@ -1,1 +1,0 @@
-import './xLoading.component.js';

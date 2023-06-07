@@ -1,1 +1,0 @@
-import './fileTransferProgress.component.js';
