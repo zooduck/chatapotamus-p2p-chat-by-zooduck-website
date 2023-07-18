@@ -91,7 +91,6 @@ body {
 }
 
 .github-repo-link {
-  background-color: var(--color-hookers-green);
   color: white;
   display: flex;
   gap: 0.5em;
