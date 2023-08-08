@@ -80,32 +80,11 @@
         <h2 class="how-to-guide__heading how-to-guide__heading--h2">Getting started</h2>
 
         <p>
-          Download the <a href="https://github.com/zooduck/chatapotamus-p2p-chat-by-zooduck/archive/refs/heads/master.zip" download="chatapotamus-p2p-chat-by-zooduck.zip">chatapotamus-p2p-chat-by-zooduck.zip</a> to your machine.
-          (This is a .zip archive of the <a href="https://github.com/zooduck/chatapotamus-p2p-chat-by-zooduck" target="_blank">zooduck/chatapotamus-p2p-chat-by-zooduck</a> repository).
-        </p>
-
-        <p>
-          Next, unzip the archive (we suggest using <a href="https://www.7-zip.org/" target="_blank">7Zip</a> to avoid
-          "path too long" errors on Windows) and copy the <code>modules</code> folder to your project, making sure to
-          place it in the root directory where files are served.
-        </p>
-
-        <p>
-          For example, if your project's <code>index.html</code> is located at <code>my-project/public/index.html</code> the <code>modules</code>
-          path should be <code>my-project/public/modules</code>.
-        </p>
-
-        <p class="how-to-guide__warning">
-          If you cannot place the <code>modules</code> folder at the root, please consult the "Fixing assets path issues" section
-          in the <code>README.md</code> file.
-        </p>
-
-        <p>
           Add the following script tag to the document head:
         </p>
 
         <pre class="how-to-guide__code-snippet">
-&lt;script src="path/to/chatapotamus-p2p-chat-by-zooduck.distributable/index.module.js" type="module"&gt;&lt;/script&gt;</pre>
+&lt;script src="https://cdn.jsdelivr.net/gh/zooduck/chatapotamus-p2p-chat-by-zooduck@latest/modules/%40zooduck/chatapotamus-p2p-chat-by-zooduck/index.module.js" type="module"&gt;&lt;/script&gt;</pre>
 
         <p>
           Then, add the element to your page:
